@@ -1,11 +1,12 @@
 # Install Dependancies
 On your Pi in a terminal run
-
+```sh
 sudo apt-get update
 sudo apt-get install git
 sudo apt-get install sense-hat
 sudo pip3 install numpy
 sudo pip3 install kafka-python
+```
 
 # Git
 set up your git credentials
