@@ -10,7 +10,7 @@ parser.read('Config.ini')
 
 device=  parser.get('device', 'deviceId')
 server = parser.get('cloud','bootstrapServers')
-
+time.sleep(60)
 
 sense = SenseHat()
 start_time = datetime.now()
@@ -114,7 +114,7 @@ def display(X,template):
 
 
 for msg in consumer:
-    print(msg)
+#    print(msg)
     jSon = msg.value.decode('utf-8')
     jDict = json.loads(jSon)
    
