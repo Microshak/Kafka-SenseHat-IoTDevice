@@ -35,7 +35,7 @@ red = (255, 0, 0) # red
 blue = (0, 255, 0) # blue
 
 
-consumer = KafkaConsumer( group_id='my_favorite_group', bootstrap_servers=server)
+consumer = KafkaConsumer( group_id=device, bootstrap_servers=server)
 consumer.subscribe([device+'alerts' , 'alerts'])
 
 def transform(arr):
