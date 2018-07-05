@@ -10,7 +10,7 @@ parser.read('Config.ini')
 
 device=  parser.get('device', 'deviceId')
 server = parser.get('cloud','bootstrapServers')
-time.sleep(60)
+#time.sleep(60)
 
 sense = SenseHat()
 start_time = datetime.now()
@@ -32,7 +32,7 @@ green = (92, 230, 103) # green
 yellow = (205, 193, 106) # yellow
 
 red = (255, 0, 0) # red
-blue = (0, 255, 0) # blue
+blue = (0, 0, 255) # blue
 
 
 consumer = KafkaConsumer( group_id=device, bootstrap_servers=server)
@@ -122,7 +122,7 @@ for msg in consumer:
     if(jDict['button'] == 'pressed'):
         X = green
     else:
-        X = yellow
+        X = red
     
     if device != jDict['device'] and msg.topic == 'alerts':
         X = blue

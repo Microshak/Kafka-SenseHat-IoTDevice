@@ -11,7 +11,7 @@ parser.read('Config.ini')
 
 device=  parser.get('device', 'deviceId')
 server = parser.get('cloud','bootstrapServers')
-time.sleep(60)     
+#time.sleep(60)     
 print('ready')
 producer = KafkaProducer(bootstrap_servers=server)
     
