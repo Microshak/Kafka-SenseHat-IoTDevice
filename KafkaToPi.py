@@ -10,7 +10,7 @@ parser.read('Config.ini')
 
 device=  parser.get('device', 'deviceId')
 server = parser.get('cloud','bootstrapServers')
-#time.sleep(60)
+time.sleep(60)
 
 sense = SenseHat()
 start_time = datetime.now()
